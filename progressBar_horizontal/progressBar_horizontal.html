@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .my-progress{position: relative; width:100%;margin:0 auto;}
+        .my-progress_bg{height: 10px; border: 1px solid #ddd; border-radius: 5px; overflow: hidden;background-color:#f2f2f2;
+        box-sizing: border-box}
+        .my-progress_bar{background: #5FB878; width: 0; height: 10px; border-radius: 5px;}
+        .my-progress_btn{width: 20px; height: 20px; border-radius: 5px; position: absolute;background:#fff;
+            left: 0px; margin-left: -10px; top:-5px; cursor: pointer;border:1px #ddd solid;box-sizing:border-box;}
+        .my-progress_btn:hover{border-color:#F7B824;}
+        .box{
+            padding: 50px;
+            width: 500px;
+        }
+    </style>
+</head>
+<body>
+
+　　　　<div class="my-progress">
+            <div class="my-progress_bg">
+                <div class="my-progress_bar"></div>
+            </div>
+            <div class="my-progress_btn"></div>
+            <div class="text">0%</div>
+        </div>
+
+<div class="box"></div>
+<div class="box"></div>
+<div class="box"></div>
+<script src="../js/jquery.js"></script>
+<script src="progressBar_horizontal.js"></script>
+<script>
+    $(".box").progressBar({
+        callBack: function (data) {
+            console.log(data)
+        }
+    })
+</script>
+</body>
+</html>
